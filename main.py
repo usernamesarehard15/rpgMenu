@@ -13,4 +13,3 @@ for action in actions:
 playing = True
 while (playing):
 	runCommand(input(actionsDisplay))
-
