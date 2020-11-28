@@ -6,7 +6,6 @@ class action:
         self.name = name
         self.aliases = aliases
 
-
 class actInventory(action):
     def __init__(self):
         aliases = ('show inventory', 'show inv', 'inventory', 'inv', 'i')
@@ -57,7 +56,7 @@ def runCommand(playerInput):
     args = playerInput.lower().strip().split(' ')
     command = args.pop(0)
     # handling edge cases for multi word commands
-    if (command in ('show', 'use', 'quit', 'exit')):
+    if (command in ('show', 'use', 'quit', 'exit') and len(args) > 0):
         command += ' ' + args.pop(0)
 
     # Find and run action, note if successful
