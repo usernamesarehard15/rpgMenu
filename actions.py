@@ -6,6 +6,7 @@ class action:
         self.name = name
         self.aliases = aliases
 
+
 class actInventory(action):
     def __init__(self):
         aliases = ('show inventory', 'show inv', 'inventory', 'inv', 'i')
